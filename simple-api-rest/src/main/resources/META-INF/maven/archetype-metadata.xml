@@ -21,6 +21,7 @@
       <defaultValue>/</defaultValue>
     </requiredProperty>
 
+    <requiredProperty key="imageRegistry"/>
     <requiredProperty key="package"/>
 
   </requiredProperties>
@@ -44,6 +45,10 @@
 
     <fileSet encoding="UTF-8">
       <directory>.mvn</directory>
+    </fileSet>
+
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>k8s</directory>
     </fileSet>
 
     <fileSet filtered="true" packaged="true">

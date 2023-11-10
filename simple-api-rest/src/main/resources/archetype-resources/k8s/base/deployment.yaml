@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ${artifactName}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      deployment: ${artifactName}
+  template:
+    metadata:
+      labels:
+        deployment: ${artifactName}
+    spec:
+      containers:
+      - name: ${artifactName}
+        image: ${imageRegistry}/${artifactName}
+        ports:
+        - containerPort: 8080
+          protocol: TCP
