@@ -1,0 +1,71 @@
+<archetype-descriptor
+  xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd"
+  name="aem-archetype"
+  xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <requiredProperties>
+
+    <requiredProperty key="artifactName">
+      <defaultValue>
+        ${artifactId.replaceAll("^a|-a", "A").replaceAll("^b|-b", "B").replaceAll("^c|-c", "C").replaceAll("^d|-d", "D").replaceAll("^e|-e", "E").replaceAll("^f|-f", "F").replaceAll("^g|-g", "G").replaceAll("^h|-h", "H").replaceAll("^i|-i", "I").replaceAll("^j|-j", "J").replaceAll("^k|-k", "K").replaceAll("^l|-l", "L").replaceAll("^m|-m", "M").replaceAll("^n|-n", "N").replaceAll("^o|-o", "O").replaceAll("^p|-p", "P").replaceAll("^q|-q", "Q").replaceAll("^r|-r", "R").replaceAll("^s|-s", "S").replaceAll("^t|-t", "T").replaceAll("^u|-u", "U").replaceAll("^v|-v", "V").replaceAll("^w|-w", "W").replaceAll("^x|-x", "X").replaceAll("^y|-y", "Y").replaceAll("^z|-z", "Z")}
+      </defaultValue>
+    </requiredProperty>
+
+    <requiredProperty key="groupId">
+    </requiredProperty>
+    <requiredProperty key="entity">
+      <defaultValue>Item</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="path">
+      <defaultValue>/</defaultValue>
+    </requiredProperty>
+
+    <requiredProperty key="package"/>
+
+  </requiredProperties>
+
+  <fileSets>
+
+    <fileSet encoding="UTF-8">
+      <directory></directory>
+      <includes>
+        <include>.editorconfig</include>
+        <include>.gitignore</include>
+        <include>README.md</include>
+        <include>mvnw</include>
+        <include>mvnw.cmd</include>
+        <include>.mvn</include>
+      </includes>
+      <excludes>
+        <exclude>.archetype-config</exclude>
+      </excludes>
+    </fileSet>
+
+    <fileSet encoding="UTF-8">
+      <directory>.mvn</directory>
+    </fileSet>
+
+    <fileSet filtered="true" packaged="true">
+      <directory>src/main/docker</directory>
+    </fileSet>
+
+    <fileSet filtered="true" packaged="true">
+      <directory>src/main/java</directory>
+    </fileSet>
+
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>src/main/resources</directory>
+    </fileSet>
+
+    <fileSet filtered="true" packaged="true">
+      <directory>src/test/java</directory>
+    </fileSet>
+
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>src/test/resources</directory>
+    </fileSet>
+
+  </fileSets>
+</archetype-descriptor>
+
